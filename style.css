@@ -9,7 +9,9 @@ a:link, a:visited, a:hover, a:active{
     text-decoration: none;
 }
 
-/* html::-webkit-scrollbar-track{
+
+/* SCROLL BAR PERSONALIZADA QUE NÃO DEU CERTO */
+html::-webkit-scrollbar-track{
     box-shadow: inset 0 0 5px grey;
     border-radius: 10px;
 }
@@ -21,7 +23,11 @@ html::-webkit-scrollbar-thumb{
 
 html::-webkit-scrollbar-thumb:hover{
     background-color: #a9ea44;
-} */
+}
+
+body{
+    background-color: #282828;
+}
 
 header{
     width: 100%;
@@ -32,6 +38,24 @@ header{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.animacao{
+    animation: textoPulando 900ms infinite normal 1s;
+}
+
+@keyframes textoPulando{
+    from{
+        line-height: 0px;
+        margin-left: 0;
+        font-size: medium;
+        color: #FFF;
+    } to{
+        line-height: 60px;
+        margin-left: 10px;
+        font-size: x-large;
+        color: #FCC40F;
+    }
 }
 
 main{
@@ -59,7 +83,8 @@ main{
 
 .container{
     width: 100%;
-    background-color: #282828;
+    border-radius: 10px;
+    background-color: #505050;
 }
 
 
@@ -70,14 +95,31 @@ main{
     margin: 0 auto;
 }
 
+.card-1-title, .card-2-title, .card-3-title{
+    font-weight: bolder;
+}
 
 /* CARD TIPO 1 */
 .card-tipo-1{
+    margin: 30px auto;
+    background-color: #afafaf;
+    border-radius: 9px;
     display: flex;
     padding: 80px;
+    width: 90%;
+}
+
+.card-tipo-1:hover{
+    background-color: #8c8c8c;
+}
+
+.card-1-img{
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .card-1-textos{
+    text-align: center;
     margin: 0 auto;
     margin: 0 20px;
     padding: 40px;
@@ -85,7 +127,6 @@ main{
     flex-direction: column;
     justify-content: center;
     justify-content: flex-start;
-    text-align: center;
 }
 
 .card-1-title{
@@ -100,14 +141,19 @@ main{
 }
 
 .card-tipo-2{
-    width: 50%;
-    margin: 0 auto;
-    padding: 10px;
+    width: 45%;
+    margin: 40px auto;
     border-radius: 9px;
     display: flex;
     flex-direction: column;
     padding: 80px;
     text-align: center;
+    background-color: #afafaf;
+    max-height: 100%;
+}
+
+.card-tipo-2:hover{
+    background-color: #8c8c8c;
 }
 
 .card-2-title{
@@ -129,6 +175,7 @@ main{
     flex-flow: column;
     background-color: #afafaf;
     max-height: 100%;
+    text-align: center;
 }
 
 .card-tipo-3:hover{
@@ -140,9 +187,16 @@ main{
     max-height: 100%;
 }
 
+.last-row{
+    padding: 0 0 100px 0;
+}
+
+.card-4-texto{
+    text-align: justify;
+}
+
 /* BOTÃO TO TOP */
 .to-top{
-    background-color: #FFF;
     position: fixed;
     bottom: 16px;
     right: 32px;
